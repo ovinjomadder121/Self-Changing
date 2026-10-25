@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- App Background Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Outer subtle circular progress ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#1e293b" stroke-width="24"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#primaryGrad)" stroke-width="24" stroke-dasharray="850 1130" stroke-linecap="round" transform="rotate(-90 256 256)"/>
+  
+  <!-- Upward transformation arrow + checkmark hybrid -->
+  <g filter="url(#glow)">
+    <!-- Ascending Wings / Arrow -->
+    <path d="M 256 120 L 350 240 L 300 240 L 300 360 L 212 360 L 212 240 L 162 240 Z" fill="url(#primaryGrad)"/>
+    <!-- Checkmark inside -->
+    <path d="M 200 270 L 240 310 L 320 200" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Star / Sparkle in top right corner -->
+  <circle cx="370" cy="140" r="10" fill="#fef08a"/>
+  <path d="M 370 120 L 370 160 M 350 140 L 390 140" stroke="#fef08a" stroke-width="4" stroke-linecap="round"/>
+</svg>

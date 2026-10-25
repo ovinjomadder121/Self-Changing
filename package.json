@@ -1,0 +1,13 @@
+{
+  "name": "self-changing-app",
+  "version": "1.0.0",
+  "description": "Offline 12-Month Habit Tracker & Self Discipline App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "bundle": "node bundle-singlefile.js"
+  },
+  "keywords": ["habit-tracker", "offline-app", "pwa", "self-improvement"],
+  "author": "",
+  "license": "MIT"
+}
